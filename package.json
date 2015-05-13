@@ -26,6 +26,7 @@
     "gulp-livereload": "^3.8.0",
     "gulp-notify": "^2.2.0",
     "http-server": "^0.8.0",
+    "jquery": "^2.1.4",
     "react": "^0.13.3",
     "reactify": "^1.1.1",
     "vinyl-source-stream": "^1.1.0",
