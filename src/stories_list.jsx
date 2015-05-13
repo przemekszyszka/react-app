@@ -1,9 +1,12 @@
 import React from 'react'
 import Story from './story'
+import jquery from 'jquery';
 
 class StoriesList extends React.Component {
-  propTypes: {
-    stories: React.proptypes.any.required;
+  componentDidMount() {
+    jquery.get("https://fierce-gorge-1132.herokuapp.com/stories", function(stories) {
+      this.setState({stories: stories});
+    }.bind(this));
   }
 
   render() {
@@ -15,8 +18,8 @@ class StoriesList extends React.Component {
   }
 
   _renderStories(stories) {
-    if (stories) {
-      return (stories.map(story =>
+    if (this.state) {
+      return (this.state.stories.map(story =>
         <Story key={story.id} story={story} />
       ));
     }
