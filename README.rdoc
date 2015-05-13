@@ -1,0 +1,13 @@
+=React-app
+
+== Configuration
+
+Download the repostirory
+    git clone https://github.com/przemekszyszka/react-app.git
+
+Install all the depencencies
+    npm install
+
+Start the application using two terminals with commands
+    npm start
+    gulp
