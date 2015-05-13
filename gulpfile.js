@@ -15,7 +15,7 @@ gulp.task('build', function () {
   .bundle()
   .on("error", notify.onError({
         message: 'Error: <%= error.message %>',
-        sound: true
+        sound: false
       }))
   .pipe(source('app.js'))
   .pipe(gulp.dest('dist'))
