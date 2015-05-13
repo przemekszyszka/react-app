@@ -2,11 +2,11 @@
   "name": "react-app",
   "version": "1.0.0",
   "description": "Pilot Academy Workshop: React.js",
-  "main": "src/app.js",
+  "main": "src/app.jsx",
   "scripts": {
     "test": "echo \"Error no test specified\" && exit 1",
     "start": "http-server dist --silent",
-    "watch": "npm start & watchify . -o dist/app.js --verbose --debug --extension .jsx"
+    "build": "browserify src/app.jsx -o build/main.js --extension .jsx"
   },
   "author": "Przemysław Szyszka",
   "license": "ISC",
@@ -17,10 +17,14 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "babelify": "^6.1.0",
     "browserify": "^10.1.3",
+    "gulp": "^3.8.11",
+    "gulp-livereload": "^3.8.0",
     "http-server": "^0.8.0",
     "react": "^0.13.3",
     "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.2.1"
   }
 }
