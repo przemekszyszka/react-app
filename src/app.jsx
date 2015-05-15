@@ -1,4 +1,4 @@
 import React from 'react';
-import HelloWorld from './hello_world';
+import Page from './page';
 
-React.render(<HelloWorld />, document.body);
+React.render(<Page />, document.body);
