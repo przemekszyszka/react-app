@@ -1,6 +1,7 @@
 import React from 'react'
 import Story from './story'
 import jquery from 'jquery';
+import {ListGroup, ListGroupItem} from 'react-bootstrap';
 
 class StoriesList extends React.Component {
   componentDidMount() {
@@ -11,16 +12,18 @@ class StoriesList extends React.Component {
 
   render() {
     return (
-      <div>
+      <ListGroup>
         {this._renderStories(this.props.stories)}
-      </div>
+      </ListGroup>
     );
   }
 
   _renderStories(stories) {
     if (this.state) {
       return (this.state.stories.map(story =>
-        <Story key={story.id} story={story} />
+        <ListGroupItem key={story.id}>
+          <Story story={story}></Story>
+        </ListGroupItem>
       ));
     }
   }

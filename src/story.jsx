@@ -1,4 +1,5 @@
 import React from 'react';
+import {Badge} from 'react-bootstrap';
 
 class Story extends React.Component {
   propTypes: {
@@ -7,9 +8,13 @@ class Story extends React.Component {
 
   render() {
     return (
-      <div>
-        <a href={this.props.story.url}>{this.props.story.title}</a>
-        <span>scrore: {this.props.story.score}</span>
+      <div className="row">
+        <div className="col-sm-8">
+          <a href={this.props.story.url}>{this.props.story.title}</a>
+        </div>
+        <div className="col-sm-4 text-right">
+          <p>scrore: <Badge>{this.props.story.score}</Badge></p>
+        </div>
       </div>
     );
   }
