@@ -4,8 +4,12 @@ import jquery from 'jquery';
 import {ListGroup, ListGroupItem} from 'react-bootstrap';
 
 class StoriesList extends React.Component {
+  propTypes: {
+    endpoint: React.PropTypes.String.isRequired
+  }
+
   componentDidMount() {
-    jquery.get("https://fierce-gorge-1132.herokuapp.com/stories", function(stories) {
+    jquery.get("https://fierce-gorge-1132.herokuapp.com/" + this.props.endpoint, function(stories) {
       this.setState({stories: stories});
     }.bind(this));
   }
