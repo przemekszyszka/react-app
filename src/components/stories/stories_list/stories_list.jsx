@@ -1,5 +1,5 @@
 import React from 'react'
-import Story from './story'
+import Story from './story/story'
 import jquery from 'jquery';
 import {ListGroup, ListGroupItem} from 'react-bootstrap';
 

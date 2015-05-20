@@ -1,8 +1,8 @@
 import React from 'react';
-import Menu from './menu';
 import Router from "react-router";
-import PopularStories from './popular_stories';
-import RecentStories from './recent_stories';
+import Menu from './components/menu/menu';
+import PopularStories from './components/stories/popular_stories';
+import RecentStories from './components/stories/recent_stories';
 import {Route, DefaultRoute} from "react-router";
 
 var routes = (
